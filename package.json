@@ -1,0 +1,30 @@
+{
+  "name": "next-safe",
+  "version": "1.0.0",
+  "author": "Trezy <tre@trezy.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "mainMin": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "moduleMin": "dist/index.min.mjs",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "next": "^9.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.1",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.31.0",
+    "rollup-plugin-progress": "^1.1.2",
+    "semantic-release": "^17.2.1"
+  },
+  "dependencies": {
+    "content-security-policy-builder": "^2.1.0"
+  }
+}
