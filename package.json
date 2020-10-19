@@ -1,12 +1,10 @@
 {
   "name": "next-safe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Trezy <tre@trezy.com>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "dist/index.js",
-  "mainMin": "dist/index.min.js",
   "module": "dist/index.mjs",
-  "moduleMin": "dist/index.min.mjs",
   "scripts": {
     "build": "rollup -c"
   },
@@ -23,8 +21,5 @@
     "rollup": "^2.31.0",
     "rollup-plugin-progress": "^1.1.2",
     "semantic-release": "^17.2.1"
-  },
-  "dependencies": {
-    "content-security-policy-builder": "^2.1.0"
   }
 }
