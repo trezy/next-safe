@@ -1,6 +1,6 @@
 {
   "name": "next-safe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
