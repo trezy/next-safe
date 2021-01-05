@@ -1,12 +1,14 @@
 {
   "name": "next-safe",
-  "version": "1.0.3",
+  "version": "0.0.0-development",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "scripts": {
-    "build": "rollup -c"
+    "build": "webpack --mode production",
+    "dev": "webpack -w",
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "next": "^9.5.0"
@@ -15,11 +17,15 @@
     "@babel/core": "^7.12.1",
     "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
-    "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-commonjs": "^15.1.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "rollup": "^2.31.0",
-    "rollup-plugin-progress": "^1.1.2",
-    "semantic-release": "^17.2.1"
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "semantic-release": "^17.3.1",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trezy/next-safe.git"
   }
 }
