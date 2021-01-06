@@ -34,7 +34,7 @@ yarn add next-safe
 ```js
 const nextSafe = require('next-safe')
 
-const isDev = process.env.NODE_ENV === 'production'
+const isDev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
 	async headers () {
