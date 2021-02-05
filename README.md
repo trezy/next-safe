@@ -32,7 +32,7 @@ yarn add next-safe
 `next-safe` exports a single function that generates all of your headers. In your `next.config.js` file, you can pass these directly into the `headers` key for any route you want to set the headers on.
 
 ```js
-const nextSafe = require('next-safe')
+const nextSafe = require('next-safe').default
 
 const isDev = process.env.NODE_ENV !== 'production'
 
