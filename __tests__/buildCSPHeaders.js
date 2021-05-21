@@ -1,5 +1,5 @@
 // Local imports
-import { buildCSPHeaders } from '../lib/buildCSPHeaders'
+const buildCSPHeaders = require('../lib/buildCSPHeaders')
 
 
 

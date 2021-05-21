@@ -1,5 +1,5 @@
 // Local imports
-import { crunchPermissionsPolicyHeader } from '../lib/crunchPermissionsPolicyHeader'
+const crunchPermissionsPolicyHeader = require('../lib/crunchPermissionsPolicyHeader')
 
 
 

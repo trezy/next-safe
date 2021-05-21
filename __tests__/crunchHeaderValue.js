@@ -1,5 +1,5 @@
 // Local imports
-import { crunchHeaderValue } from '../lib/crunchHeaderValue'
+const crunchHeaderValue = require('../lib/crunchHeaderValue')
 
 
 

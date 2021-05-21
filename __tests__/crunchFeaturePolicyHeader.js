@@ -1,5 +1,5 @@
 // Local imports
-import { crunchFeaturePolicyHeader } from '../lib/crunchFeaturePolicyHeader'
+const crunchFeaturePolicyHeader = require('../lib/crunchFeaturePolicyHeader')
 
 
 
