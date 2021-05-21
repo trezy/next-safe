@@ -34,15 +34,6 @@ jobs:
       - name: Install Packages
         run: yarn install
 
-      - name: Compile
-        run: yarn build
-
-      - name: Upload Compiled Files
-        uses: actions/upload-artifact@v2
-        with:
-          name: compiled-files
-          path: dist/
-
       - name: Test
         run: yarn test --coverage
 
