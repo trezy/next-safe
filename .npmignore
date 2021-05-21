@@ -1,5 +1,2 @@
-.babelrc
+__tests__
 .editorconfig
-rollup.config.js
-
-lib/
