@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "types": "types/types.d.ts",
   "scripts": {
-    "prepublish": "jsdoc -t node_modules/tsd-jsdoc/dist -r src/. -d types",
+    "prepublish": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
     "test": "jest",
     "semantic-release": "semantic-release"
   },
