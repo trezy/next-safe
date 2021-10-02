@@ -4,19 +4,24 @@
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
   "main": "lib/index.js",
+  "types": "types/types.d.ts",
   "scripts": {
+    "build-types": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
     "test": "jest",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
-    "next": "^9.5.0"
+    "next": "^9.5.0 || ^10.2.1 || ^11.1.0"
   },
   "devDependencies": {
     "jest": "^26.6.3",
-    "semantic-release": "^17.3.1"
+    "jsdoc": "^3.6.7",
+    "semantic-release": "^17.3.1",
+    "tsd-jsdoc": "^2.5.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/trezy/next-safe.git"
-  }
+  },
+  "dependencies": {}
 }

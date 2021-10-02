@@ -52,20 +52,35 @@ By default, this sets all of the headers you need and provides substantial prote
 
 ## Configuration
 
-`next-safe` allows you to configure every header that it generates.
+`next-safe` allows you to configure every header that it generates. Most config options may be set to `false` to disable the feature. Here are the default values for all config options.
 
 ```js
 nextSafe({
-	contentTypeOptions,
+	contentTypeOptions: "nosniff",
 	contentSecurityPolicy: {
-		reportOnly,
+		"base-uri": "'none'",
+		"child-src": "'none'",
+		"connect-src": "'self'",
+		"default-src": "'self'",
+		"font-src": "'self'",
+		"form-action": "'self'",
+		"frame-ancestors": "'none'",
+		"frame-src": "'none'",
+		"img-src": "'self'",
+		"manifest-src": "'self'",
+		"object-src": "'none'",
+		"prefetch-src": "'self'",
+		"script-src": "'self'",
+		"style-src": "'self'",
+		"worker-src": "'self'",
+		reportOnly: false,
 	},
-	frameOptions,
-	permissionsPolicy,
-	permissionsPolicyDirectiveSupport,
-	isDev,
-	referrerPolicy,
-	xssProtection,
+	frameOptions: "DENY",
+	permissionsPolicy: {},
+	permissionsPolicyDirectiveSupport: ["proposed", "standard"],
+	isDev: false,
+	referrerPolicy: "no-referrer",
+	xssProtection: "1; mode=block",
 })
 ```
 
@@ -80,6 +95,8 @@ nextSafe({
 #### Description
 
 `contentTypeOptions` controls the value of the `X-Content-Type-Options` header, which tells the browser not to change the MIME types for any downloaded content.
+
+Set to `false` to disable the `X-Content-Type-Options` header.
 
 ---
 
@@ -116,6 +133,7 @@ Additionally, if `isDev` is set to `true`:
 	contentSecurityPolicy: {
 		"connect-src": "webpack://*",
 		"script-src": "'unsafe-eval'",
+		"style-src": "'unsafe-inline'",
 	},
 }
 ```
@@ -176,6 +194,14 @@ Note that `'self'` is in quotes. This is a CSP thing and `next-safe` does not ha
 }
 ```
 
+##### Disable CSP entirely (NOT recommended)
+
+```js
+{
+	contentSecurityPolicy: false,
+}
+```
+
 #### `contentSecurityPolicy.reportOnly`
 
 Setting `contentSecurityPolicy.reportOnly` to `true` will rename the `Content-Security-Policy` header to `Content-Security-Policy-Report-Only`. This is useful if you want to test your CSP without breaking your site. Make sure to also set up an endpoint to receive the reports, then set up your [`contentSecurityPolicy.report-to`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) field to point to the endpoint.
@@ -192,6 +218,8 @@ Setting `contentSecurityPolicy.reportOnly` to `true` will rename the `Content-Se
 
 `frameOptions` controls the value of the `X-Frame-Options` header.
 
+Set to `false` to disable the `X-Frame-Options` header.
+
 ---
 
 ### `permissionsPolicy`
@@ -201,6 +229,8 @@ Setting `contentSecurityPolicy.reportOnly` to `true` will rename the `Content-Se
 `permissionsPolicy` controls the value of the `Permissions-Policy` header, as well as the legacy `Feature-Policy` header. This header is used to enable/disable certain features for a website.
 
 By default, all features are set to `'none'` unless you tell `next-safe` otherwise.
+
+Set to `false` to disable `Permissions-Policy` and `Feature-Policy` entirely.
 
 ---
 
@@ -259,6 +289,8 @@ This tells `next-safe` if it should be operating in development mode. Specifical
 
 `referrerPolicy` controls the `Referrer-Policy` header, which tells the browser whether or not to send the `Referrer` header when the site makes a request, or the user clicks on a link.
 
+Set to `false` to disable the `Referrer-Policy` header.
+
 ---
 
 ### `xssProtection`
@@ -271,9 +303,19 @@ This tells `next-safe` if it should be operating in development mode. Specifical
 
 `xssProtection` controls the value of the `X-XSS-Protection` header. This header is mostly for backwards compatibility. It enables some security features in older browsers that dobn't support CSP.
 
+Set to `false` to disable the `X-XSS-Protection` header.
+
 ---
 
 ## Troubleshooting
+
+### Why won't web workers load in Safari?
+
+Safari (as of 09-2021) has not yet implemented the `worker-src` directive. To use workers, you must set `child-src` to match your `worker-src` directives, or explicitly set it to `'self'`.
+
+### Why do some browsers throw header parsing errors?
+
+Not all browsers treat duplicate headers the same way when parsing for protection settings. You are likely encountering this error because a server between your app and the browser is adding the same security headers. If you're serving your app through a reverse proxy (e.g. NGINX), remove the headers from your proxy's config, or disable the erroring header via `next-safe`'s config.
 
 ### Why are there so many duplicate headers?
 
