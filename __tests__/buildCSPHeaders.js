@@ -30,7 +30,7 @@ const DEFAULT_CSP = {
 
 describe('buildCSPHeaders', () => {
 	function testCSPWithConfig(testName, config) {
-		test('with defaults', () => {
+		test(testName, () => {
 			const builtCSPHeaders = buildCSPHeaders(config)
 			const expectedCSP = {
 				...DEFAULT_CSP,
