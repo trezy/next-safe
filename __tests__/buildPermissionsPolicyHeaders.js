@@ -28,8 +28,6 @@ describe('buildPermissionsPolicyHeaders', () => {
 			permissionsPolicyDirectiveSupport: ["proposed", "standard", "experimental"],
 		})
 
-		console.log(result)
-
 		expect(result).toEqual(
 			[
 				{
