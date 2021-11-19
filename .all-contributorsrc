@@ -20,6 +20,19 @@
         "review",
         "test"
       ]
+    },
+    {
+      "login": "UncleClapton",
+      "name": "Cameron Welter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2686824?v=4",
+      "profile": "https://github.com/UncleClapton",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "maintenance",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
