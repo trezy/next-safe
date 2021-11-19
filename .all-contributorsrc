@@ -42,6 +42,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "frattaro",
+      "name": "Anton Frattaroli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14955351?v=4",
+      "profile": "https://github.com/frattaro",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
