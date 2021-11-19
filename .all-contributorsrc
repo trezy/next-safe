@@ -60,6 +60,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "JLucasCAmorim",
+      "name": "João Lucas Evangelista C. de Amorim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27377264?v=4",
+      "profile": "https://github.com/JLucasCAmorim",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
