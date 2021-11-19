@@ -1,4 +1,7 @@
 # next-safe
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 `next-safe` helps secure your Next.js apps by providing sensible defaults for the most common security headers, including:
 
@@ -324,3 +327,23 @@ In some cases, `next-safe` sends the same header under different header names to
 ### Why do I see so many `⚠️ Unrecognized Feature` warnings?
 
 Not all browsers are as up-to-date as `next-safe` with the standardized features of the `Permissions-Policy` header. As such, some features will cause warnings to show up in the console. These can also occur if you're using the `experimental` or `legacy` feature lists. These warnings are harmless and can safely be ignored.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://trezy.com"><img src="https://avatars.githubusercontent.com/u/442980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trezy</b></sub></a><br /><a href="https://github.com/trezy/next-safe/issues?q=author%3Atrezy" title="Bug reports">🐛</a> <a href="https://github.com/trezy/next-safe/commits?author=trezy" title="Code">💻</a> <a href="#example-trezy" title="Examples">💡</a> <a href="#ideas-trezy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-trezy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-trezy" title="Maintenance">🚧</a> <a href="https://github.com/trezy/next-safe/pulls?q=is%3Apr+reviewed-by%3Atrezy" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/trezy/next-safe/commits?author=trezy" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
