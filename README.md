@@ -1,6 +1,6 @@
 # next-safe
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 `next-safe` helps secure your Next.js apps by providing sensible defaults for the most common security headers, including:
@@ -339,6 +339,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://trezy.com"><img src="https://avatars.githubusercontent.com/u/442980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trezy</b></sub></a><br /><a href="https://github.com/trezy/next-safe/issues?q=author%3Atrezy" title="Bug reports">🐛</a> <a href="https://github.com/trezy/next-safe/commits?author=trezy" title="Code">💻</a> <a href="#example-trezy" title="Examples">💡</a> <a href="#ideas-trezy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-trezy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-trezy" title="Maintenance">🚧</a> <a href="https://github.com/trezy/next-safe/pulls?q=is%3Apr+reviewed-by%3Atrezy" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/trezy/next-safe/commits?author=trezy" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/UncleClapton"><img src="https://avatars.githubusercontent.com/u/2686824?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Welter</b></sub></a><br /><a href="https://github.com/trezy/next-safe/issues?q=author%3AUncleClapton" title="Bug reports">🐛</a> <a href="https://github.com/trezy/next-safe/commits?author=UncleClapton" title="Code">💻</a> <a href="#ideas-UncleClapton" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-UncleClapton" title="Maintenance">🚧</a> <a href="https://github.com/trezy/next-safe/commits?author=UncleClapton" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/zomars/"><img src="https://avatars.githubusercontent.com/u/3504472?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Omar López</b></sub></a><br /><a href="https://github.com/trezy/next-safe/commits?author=zomars" title="Documentation">📖</a></td>
   </tr>
 </table>
 
