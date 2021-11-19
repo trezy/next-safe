@@ -33,6 +33,15 @@
         "maintenance",
         "test"
       ]
+    },
+    {
+      "login": "zomars",
+      "name": "Omar López",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3504472?v=4",
+      "profile": "https://www.linkedin.com/in/zomars/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
