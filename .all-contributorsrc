@@ -1,0 +1,81 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "trezy",
+      "name": "Trezy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/442980?v=4",
+      "profile": "http://trezy.com",
+      "contributions": [
+        "bug",
+        "code",
+        "example",
+        "ideas",
+        "infra",
+        "maintenance",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "UncleClapton",
+      "name": "Cameron Welter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2686824?v=4",
+      "profile": "https://github.com/UncleClapton",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "maintenance",
+        "test"
+      ]
+    },
+    {
+      "login": "zomars",
+      "name": "Omar López",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3504472?v=4",
+      "profile": "https://www.linkedin.com/in/zomars/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "frattaro",
+      "name": "Anton Frattaroli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14955351?v=4",
+      "profile": "https://github.com/frattaro",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "april-ctrlspire",
+      "name": "april-ctrlspire",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79557092?v=4",
+      "profile": "https://github.com/april-ctrlspire",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "JLucasCAmorim",
+      "name": "João Lucas Evangelista C. de Amorim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27377264?v=4",
+      "profile": "https://github.com/JLucasCAmorim",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "next-safe",
+  "projectOwner": "trezy",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
