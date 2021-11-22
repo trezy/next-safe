@@ -93,9 +93,9 @@ If the commit **must** make changes to two or more **completely unrelated** file
 
 
 [all-contributors]: https://github.com/kentcdodds/all-contributors
-[bugs]: https://github.com/trezy/next-safe/issues/new?assignees=&labels=bug&template=BUG_REPORT.yml&title=
+[bugs]: https://github.com/trezy/next-safe/issues/new?assignees=&labels=bug&template=BUG_REPORT.yml
 [coc]: CODE_OF_CONDUCT.md
-[feature-request]: https://github.com/trezy/next-safe/issues/new?assignees=&labels=enhancement&template=FEATURE_REQUEST.yml&title=
+[feature-request]: https://github.com/trezy/next-safe/issues/new?assignees=&labels=enhancement&template=FEATURE_REQUEST.yml
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
 [new-pr]: https://github.com/trezy/next-safe/compare
 [yarn2install]: https://yarnpkg.com/getting-started
