@@ -1,7 +1,25 @@
 # next-safe
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<div align="center">
+  <h1><code>next-safe</code></h1>
+</div>
+
+[![Version][version-badge]][package]
+[![Bundle size][bundlephobia-badge]][bundlephobia]
+[![Downloads][downloads-badge]][npmtrends]
+[![BSD-3-Clause License][license-badge]][license]
+
+[![Release status][release-status-badge]][release-status]
+[![Test status][test-status-badge]][test-status]
+[![Code Coverage][coveralls-badge]][coveralls]
+[![Maintainability][codeclimate-badge]][codeclimate]
+
+[![Code of Conduct][code-of-conduct-badge]][code-of-conduct]
+[![PRs Welcome][prs-badge]][prs]
+
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+[![Tweet][twitter-badge]][twitter]
+<!-- [![Dependencies][daviddm-badge]][daviddm] -->
 
 `next-safe` helps secure your Next.js apps by providing sensible defaults for the most common security headers, including:
 
@@ -38,3 +56,34 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+
+
+
+[bundlephobia]: https://bundlephobia.com/package/next-safe
+[bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/next-safe?style=flat-square
+[code-of-conduct]: CODE_OF_CONDUCT.md
+[code-of-conduct-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[codeclimate]: https://codeclimate.com/github/trezy/next-safe
+[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/trezy/next-safe.svg?style=flat-square
+[coveralls]: https://coveralls.io/github/trezy/next-safe
+[coveralls-badge]: https://img.shields.io/coveralls/trezy/next-safe.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dm/next-safe.svg?style=flat-square
+[github-watch]: https://github.com/trezy/next-safe/watchers
+[github-watch-badge]: https://img.shields.io/github/watchers/trezy/next-safe.svg?style=social
+[github-star]: https://github.com/trezy/next-safe/stargazers
+[github-star-badge]: https://img.shields.io/github/stars/trezy/next-safe.svg?style=social
+[license]: LICENSE
+[license-badge]: https://img.shields.io/npm/l/next-safe.svg?style=flat-square
+[npmtrends]: https://www.npmtrends.com/next-safe
+[package]: https://npmjs.com/package/next-safe
+[prs]: CONTRIBUTING.md
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[release-status]: https://github.com/trezy/next-safe/actions/workflows/release.yml
+[release-status-badge]: https://img.shields.io/github/workflow/status/trezy/next-safe/Release?style=flat-square&label=release
+[test-status]: https://github.com/trezy/next-safe/actions/workflows/test.yml
+[test-status-badge]: https://img.shields.io/github/workflow/status/trezy/next-safe/Test?style=flat-square&label=tests
+[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20trezy/next-safe%20by%20%40PokebagApp%20https%3A%2F%2Fgithub.com%2FPokebag%2Fdata-sdk%20%F0%9F%91%8D
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/trezy/next-safe.svg?style=social
+[version-badge]: https://img.shields.io/npm/v/next-safe.svg?style=flat-square

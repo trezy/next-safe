@@ -1,0 +1,55 @@
+name: Bug Report
+description: File a bug report
+title: "[BUG]: "
+labels: ["type: bug", "needs: triage"]
+assignees:
+  - trezy
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of the bug.
+      placeholder: When I use `x`, `y` happens...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      value: |
+        1. Create new Next.js app
+        2. Setup `next-safe`:
+            ```
+            code example
+            ```
+        3. Start app
+        4. See error
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of `next-safe` are you using??
+      options:
+        - v3.x.x
+        - v2.x.x
+        - v1.x.x
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
