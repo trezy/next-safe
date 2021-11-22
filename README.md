@@ -1,4 +1,3 @@
-# next-safe
 <div align="center">
   <h1><code>next-safe</code></h1>
 </div>
