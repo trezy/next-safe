@@ -20,5 +20,6 @@
 
 ## Other Important Stuff
 
+* [Contributing Help & Guidelines](./CODE_OF_CONDUCT.md)
 * [Code of Conduct](./CODE_OF_CONDUCT.md)
 * [License](./LICENSE)
