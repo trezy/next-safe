@@ -13,8 +13,11 @@
 [![Code Coverage][coveralls-badge]][coveralls]
 [![Maintainability][codeclimate-badge]][codeclimate]
 
-[![Code of Conduct][code-of-conduct-badge]][code-of-conduct]
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![PRs Welcome][prs-badge]][prs]
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![Code of Conduct][code-of-conduct-badge]][code-of-conduct]
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
