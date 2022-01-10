@@ -16,6 +16,7 @@ nextSafe({
 		"frame-src": "'none'",
 		"img-src": "'self'",
 		"manifest-src": "'self'",
+		"media-src": "'self'",
 		"object-src": "'none'",
 		"prefetch-src": "'self'",
 		"script-src": "'self'",
