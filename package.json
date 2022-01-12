@@ -7,8 +7,9 @@
   "types": "types/types.d.ts",
   "scripts": {
     "build-types": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
-    "test": "jest",
-    "semantic-release": "semantic-release"
+    "prepublish": "yarn build-types",
+    "semantic-release": "semantic-release",
+    "test": "jest"
   },
   "peerDependencies": {
     "next": "^9.5.0 || ^10.2.1 || ^11.1.0"
