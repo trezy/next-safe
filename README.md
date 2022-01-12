@@ -14,7 +14,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![PRs Welcome][prs-badge]][prs]
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 [![Code of Conduct][code-of-conduct-badge]][code-of-conduct]
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -49,6 +49,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/frattaro"><img src="https://avatars.githubusercontent.com/u/14955351?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anton Frattaroli</b></sub></a><br /><a href="https://github.com/trezy/next-safe/issues?q=author%3Afrattaro" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/april-ctrlspire"><img src="https://avatars.githubusercontent.com/u/79557092?v=4?s=100" width="100px;" alt=""/><br /><sub><b>april-ctrlspire</b></sub></a><br /><a href="#ideas-april-ctrlspire" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/JLucasCAmorim"><img src="https://avatars.githubusercontent.com/u/27377264?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Lucas Evangelista C. de Amorim</b></sub></a><br /><a href="https://github.com/trezy/next-safe/issues?q=author%3AJLucasCAmorim" title="Bug reports">🐛</a> <a href="https://github.com/trezy/next-safe/commits?author=JLucasCAmorim" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/angelicon"><img src="https://avatars.githubusercontent.com/u/7407392?v=4?s=100" width="100px;" alt=""/><br /><sub><b>angelicon</b></sub></a><br /><a href="https://github.com/trezy/next-safe/commits?author=angelicon" title="Code">💻</a> <a href="https://github.com/trezy/next-safe/commits?author=angelicon" title="Documentation">📖</a> <a href="#ideas-angelicon" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
