@@ -71,6 +71,17 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "angelicon",
+      "name": "angelicon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7407392?v=4",
+      "profile": "https://github.com/angelicon",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
