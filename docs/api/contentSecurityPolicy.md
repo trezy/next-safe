@@ -101,6 +101,24 @@ Note that `'self'` is in quotes. This is a CSP thing and `next-safe` does not ha
 }
 ```
 
+### `contentSecurityPolicy.mergeDefaultDirectives`
+
+Setting `contentSecurityPolicy.mergeDefaultDirectives` to `true` will retain the default directive values supplied by `next-safe` and merge them with any additional directives that are added in the configuration. Duplicate values in any directives will be removed. Setting any directive as `false` will disable the directive as usual.
+
+```js
+{
+	contentSecurityPolicy: {
+		mergeDefaultDirectives: true,
+		"child-src": false,
+		// equivalent to - "child-src": false
+		"img-src": "unsplash.com",
+		// equivalent to - "img-src": ["'self'", "unsplash.com"]
+		"font-src": ["fonts.adobe.com", "fonts.gstatic.com"]
+		// equivalent to - "font-src": ["'self'", "fonts.adobe.com", "fonts.gstatic.com"]
+	},
+}
+```
+
 ### `contentSecurityPolicy.reportOnly`
 
 Setting `contentSecurityPolicy.reportOnly` to `true` will rename the `Content-Security-Policy` header to `Content-Security-Policy-Report-Only`. This is useful if you want to test your CSP without breaking your site. Make sure to also set up an endpoint to receive the reports, then set your [`contentSecurityPolicy.report-to`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) field to point to that endpoint.
