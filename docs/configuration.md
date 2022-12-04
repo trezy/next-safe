@@ -22,6 +22,7 @@ nextSafe({
 		"script-src": "'self'",
 		"style-src": "'self'",
 		"worker-src": "'self'",
+		mergeDefaultDirectives: false,
 		reportOnly: false,
 	},
 	frameOptions: "DENY",
