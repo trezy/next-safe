@@ -1,13 +1,15 @@
-module.exports = function crunchPermissionsPolicyHeader(headerValue) {
+import type { PermPolicyConfig } from '../models/nextSafe'
+
+function crunchPermissionsPolicyHeader(headerValue: PermPolicyConfig): string {
 	return Object.entries(headerValue)
-		.reduce((accumulator, [key, value]) => {
-			let serializedValue = value
+		.reduce<string[]>((accumulator, [key, value]) => {
+			const serializedValues = Array.isArray(value)
+				? value
+				: typeof value === 'string'
+				? value.split(' ')
+				: []
 
-			if (!Array.isArray(value)) {
-				serializedValue = value.split(' ')
-			}
-
-			serializedValue = serializedValue.map(item => {
+			const serializedValue = serializedValues.map(item => {
 				// Remove unnecessary quotes from tokens
 				if (item.includes('*')) {
 					return '*'
@@ -28,8 +30,9 @@ module.exports = function crunchPermissionsPolicyHeader(headerValue) {
 			})
 
 			accumulator.push(`${key}=(${serializedValue.join(' ')})`)
-
 			return accumulator
 		}, [])
 		.join(',')
 }
+
+export default crunchPermissionsPolicyHeader

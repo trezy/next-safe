@@ -1,7 +1,7 @@
-const buildPermissionsPolicyHeaders = require('../lib/buildPermissionsPolicyHeaders')
+// Local imports
+import buildPermissionsPolicyHeaders from '../src/lib/buildPermissionsPolicyHeaders'
 
 describe('buildPermissionsPolicyHeaders', () => {
-
 	test('with defaults', () => {
 		const result = buildPermissionsPolicyHeaders()
 
@@ -41,5 +41,4 @@ describe('buildPermissionsPolicyHeaders', () => {
 			]
 		)
 	})
-
 })

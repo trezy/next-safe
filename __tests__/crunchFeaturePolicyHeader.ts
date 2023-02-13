@@ -1,9 +1,5 @@
 // Local imports
-const crunchFeaturePolicyHeader = require('../lib/crunchFeaturePolicyHeader')
-
-
-
-
+import crunchFeaturePolicyHeader from '../src/lib/crunchFeaturePolicyHeader'
 
 describe('crunchFeaturePolicyHeader', () => {
 	test('with single header', () => {
