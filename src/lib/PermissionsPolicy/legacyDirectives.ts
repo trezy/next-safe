@@ -1,4 +1,4 @@
-module.exports = [
+const directives = [
 	'animations',
 	'document-write',
 	'image-compression',
@@ -16,3 +16,5 @@ module.exports = [
 	'webauthn',
 	'web-share',
 ]
+
+export default directives

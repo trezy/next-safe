@@ -4,6 +4,8 @@
  */
 
 module.exports = {
+	preset: 'ts-jest',
+
 	// Automatically clear mock calls and instances between every test
 	clearMocks: true,
 
@@ -14,8 +16,8 @@ module.exports = {
 	moduleDirectories: ['node_modules', 'shared'],
 
 	// An array of file extensions your modules use
-	moduleFileExtensions: ['js'],
+	moduleFileExtensions: ['ts', 'js'],
 
 	// A list of paths to modules that run some code to configure or set up the testing framework before each test
 	setupFilesAfterEnv: [],
-};
+}

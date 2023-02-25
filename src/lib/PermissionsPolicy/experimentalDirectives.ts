@@ -1,4 +1,4 @@
-module.exports = [
+const directives = [
 	'conversion-measurement',
 	'focus-without-user-activation',
 	'hid',
@@ -8,3 +8,5 @@ module.exports = [
 	'trust-token-redemption',
 	'vertical-scroll',
 ]
+
+export default directives

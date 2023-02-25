@@ -1,9 +1,5 @@
 // Local imports
-const crunchPermissionsPolicyHeader = require('../lib/crunchPermissionsPolicyHeader')
-
-
-
-
+import crunchPermissionsPolicyHeader from '../src/lib/crunchPermissionsPolicyHeader'
 
 describe('crunchPermissionsPolicyHeader', () => {
 	test('with single header', () => {

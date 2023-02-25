@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "CommonJS",
+    "target": "ES2015",
+    "lib": ["ES2019"],
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./dist/types",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "stripInternal": true,
+    "outDir": "./dist"
+  }
+}

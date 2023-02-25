@@ -1,4 +1,4 @@
-module.exports = [
+const directives = [
 	'accelerometer',
 	'ambient-light-sensor',
 	'autoplay',
@@ -26,3 +26,5 @@ module.exports = [
 	'web-share',
 	'xr-spatial-tracking',
 ]
+
+export default directives

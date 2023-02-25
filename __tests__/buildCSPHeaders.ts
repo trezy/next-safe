@@ -1,44 +1,18 @@
 // Local imports
-const buildCSPHeaders = require('../lib/buildCSPHeaders')
-
-
-
-
-
-// Local constants
-const DEFAULT_CSP = {
-	'base-uri': '\'none\'',
-	'child-src': '\'none\'',
-	'connect-src': '\'self\'',
-	'default-src': '\'self\'',
-	'font-src': '\'self\'',
-	'form-action': '\'self\'',
-	'frame-ancestors': '\'none\'',
-	'frame-src': '\'none\'',
-	'img-src': '\'self\'',
-	'manifest-src': '\'self\'',
-	'media-src': '\'self\'',
-	'object-src': '\'none\'',
-	'prefetch-src': '\'self\'',
-	'script-src': '\'self\'',
-	'style-src': '\'self\'',
-	'worker-src': '\'self\'',
-}
-
-
-
-
+import buildCSPHeaders from '../src/lib/buildCSPHeaders'
+import { CSP_REQUIRED_DIRECTIVE_DEFAULTS } from '../src/models/CSP'
+import type { NextSafeConfig } from '../src/models/nextSafe'
 
 describe('buildCSPHeaders', () => {
-	function testCSPWithConfig(testName, config) {
+	function testCSPWithConfig(testName: string, config?: NextSafeConfig) {
 		test(testName, () => {
 			const builtCSPHeaders = buildCSPHeaders(config)
 			const expectedCSP = {
-				...DEFAULT_CSP,
+				...CSP_REQUIRED_DIRECTIVE_DEFAULTS,
 				...(config?.contentSecurityPolicy || {}),
 			}
 
-			if (config?.isDev) {
+			if (config?.isDev && config.contentSecurityPolicy !== false) {
 				if (!config.contentSecurityPolicy?.['connect-src']) {
 					expectedCSP['connect-src'] = '\'self\' webpack://*'
 				}
