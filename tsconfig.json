@@ -11,5 +11,8 @@
     "moduleResolution": "node",
     "stripInternal": true,
     "outDir": "./dist"
-  }
+  },
+  "files": [
+    "./src/index.ts"
+  ]
 }
