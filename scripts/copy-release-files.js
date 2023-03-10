@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
+
 const { join } = require('node:path')
 const { fileURLToPath, pathToFileURL } = require('node:url')
 const { readFileSync, writeFileSync, copyFileSync } = require('node:fs')

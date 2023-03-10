@@ -1,38 +1,36 @@
-import type { PermPolicyConfig } from '../models/nextSafe'
+import { type PermPolicyConfig } from '../models/nextSafe'
 
-function crunchPermissionsPolicyHeader(headerValue: PermPolicyConfig): string {
-	return Object.entries(headerValue)
-		.reduce<string[]>((accumulator, [key, value]) => {
-			const serializedValues = Array.isArray(value)
-				? value
-				: typeof value === 'string'
-				? value.split(' ')
-				: []
+export const crunchPermissionsPolicyHeader = (
+  headerValue: PermPolicyConfig
+): string => {
+  return Object.entries(headerValue)
+    .reduce<string[]>((accumulator, [key, value]) => {
+      const serializedValues = Array.isArray(value)
+        ? value
+        : typeof value === 'string'
+        ? value.split(' ')
+        : []
 
-			const serializedValue = serializedValues.map(item => {
-				// Remove unnecessary quotes from tokens
-				if (item.includes('*')) {
-					return '*'
-				}
+      const serializedValue = serializedValues.map((item) => {
+        // Remove unnecessary quotes from tokens
+        if (item.includes('*')) {
+          return '*'
+        }
 
-				if (item === "'self'") {
-					return 'self'
-				}
+        if (item === "'self'") {
+          return 'self'
+        }
 
-				// Add quotes to all items that aren't tokens
-				if (!['*', 'self'].includes(item) && !/^['"].*['"]$/) {
-					return item
-						.replace(/^['"]/, '"')
-						.replace(/['"]$/, '"')
-				}
+        // Add quotes to all items that aren't tokens
+        if (!['*', 'self'].includes(item) && !/^['"].*['"]$/) {
+          return item.replace(/^['"]/, '"').replace(/['"]$/, '"')
+        }
 
-				return item
-			})
+        return item
+      })
 
-			accumulator.push(`${key}=(${serializedValue.join(' ')})`)
-			return accumulator
-		}, [])
-		.join(',')
+      accumulator.push(`${key}=(${serializedValue.join(' ')})`)
+      return accumulator
+    }, [])
+    .join(',')
 }
-
-export default crunchPermissionsPolicyHeader

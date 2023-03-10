@@ -1,8 +1,6 @@
-const directives = [
-	'clipboard-read',
-	'clipboard-write',
-	'gamepad',
-	'speaker-selection',
+export const proposedDirectives = [
+  'clipboard-read',
+  'clipboard-write',
+  'gamepad',
+  'speaker-selection',
 ]
-
-export default directives

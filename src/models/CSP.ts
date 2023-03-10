@@ -26,26 +26,25 @@ type CSPRequiredDirectivesConfig = {
 type CSPRequiredDirectivesDefaults = {
   [Name in CSPRequiredDirectiveNames]: string
 }
-export const CSP_REQUIRED_DIRECTIVE_DEFAULTS: Required<
-  CSPRequiredDirectivesDefaults
-> = {
-  'base-uri': "'none'",
-  'child-src': "'none'",
-  'connect-src': "'self'",
-  'default-src': "'self'",
-  'font-src': "'self'",
-  'form-action': "'self'",
-  'frame-ancestors': "'none'",
-  'frame-src': "'none'",
-  'img-src': "'self'",
-  'manifest-src': "'self'",
-  'media-src': "'self'",
-  'object-src': "'none'",
-  'prefetch-src': "'self'",
-  'script-src': "'self'",
-  'style-src': "'self'",
-  'worker-src': "'self'",
-}
+export const CSP_REQUIRED_DIRECTIVE_DEFAULTS: Required<CSPRequiredDirectivesDefaults> =
+  {
+    'base-uri': "'none'",
+    'child-src': "'none'",
+    'connect-src': "'self'",
+    'default-src': "'self'",
+    'font-src': "'self'",
+    'form-action': "'self'",
+    'frame-ancestors': "'none'",
+    'frame-src': "'none'",
+    'img-src': "'self'",
+    'manifest-src': "'self'",
+    'media-src': "'self'",
+    'object-src': "'none'",
+    'prefetch-src': "'self'",
+    'script-src': "'self'",
+    'style-src': "'self'",
+    'worker-src': "'self'",
+  }
 
 export const CSP_DEVELOPMENT_DIRECTIVE_NAMES = [
   'connect-src',
@@ -58,9 +57,9 @@ type CSPDevelopmentDirectivesDefaults = {
   [Name in CSPDevelopmentDirectiveNames]: string
 }
 export const CSP_DEVELOPMENT_DIRECTIVES: CSPDevelopmentDirectivesDefaults = {
-	'connect-src': 'webpack://*',
-	'script-src': "'unsafe-eval'",
-	'style-src': "'unsafe-inline'",
+  'connect-src': 'webpack://*',
+  'script-src': "'unsafe-eval'",
+  'style-src': "'unsafe-inline'",
 }
 
 export const CSP_OPTIONAL_DIRECTIVE_NAMES = [
@@ -104,7 +103,7 @@ const CSP_OPTION_NAMES = ['mergeDefaultDirectives', 'reportOnly'] as const
 type CSPOptionNamesTuple = typeof CSP_OPTION_NAMES
 type CSPOptionNames = CSPOptionNamesTuple[number]
 type CSPOptionsConfig = {
-  [Name in CSPOptionNames]?: Boolean
+  [Name in CSPOptionNames]?: boolean
 }
 
 export type CSPConfig = CSPDirectivesConfig & CSPOptionsConfig

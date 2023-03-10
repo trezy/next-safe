@@ -4,7 +4,8 @@ insert_final_newline = true
 
 [*.js]
 charset = utf-8
-indent_style = tab
+indent_style = space
+indent_size = 2
 
 [*.yml]
 indent_style = space
