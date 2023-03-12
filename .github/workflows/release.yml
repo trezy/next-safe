@@ -2,21 +2,14 @@ name: Release
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Test
+  push:
     branches:
       - main
-      - next
       - beta
-      - alpha
-    types:
-      - completed
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,7 +23,18 @@ jobs:
       - name: Install Packages
         run: yarn install
 
-      - name: Build distribution
+      - name: Lint
+        run: yarn lint:ci
+
+      - name: Test
+        run: yarn test:ci
+
+      - name: Report coverage
+        uses: coverallsapp/github-action@v1.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Distribution
         run: yarn build
 
       - name: Release

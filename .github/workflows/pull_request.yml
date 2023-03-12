@@ -1,9 +1,13 @@
-name: Test
+name: Pull Request
 
-on: ['push']
+on:
+  pull_request:
+    branches:
+      - main
+      - beta
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,8 +22,11 @@ jobs:
       - name: Install Packages
         run: yarn install
 
+      - name: Lint
+        run: yarn lint:ci
+
       - name: Test
-        run: yarn test --coverage
+        run: yarn test:ci
 
       - name: Report coverage
         uses: coverallsapp/github-action@v1.1.0

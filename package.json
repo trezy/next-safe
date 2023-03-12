@@ -6,11 +6,14 @@
   "main": "index.js",
   "types": "types.d.ts",
   "scripts": {
+    "test:ci": "jest --coverage",
     "test": "jest",
+    "lint:ci": "eslint --max-warnings=0",
+    "lint": "eslint",
     "clean": "rm -rf ./dist",
-    "copy-release-files": "node ./scripts/copy-release-files.js",
-    "build": "yarn clean && tsc && yarn copy-release-files",
-    "semantic-release": "yarn build && semantic-release"
+    "build:preare": "node ./scripts/copy-release-files.js",
+    "build": "yarn clean && yarn build:prepare && tsc",
+    "release": "yarn build && semantic-release"
   },
   "peerDependencies": {
     "next": "^9.5.0 || ^10.2.1 || ^11.1.0 || ^12.1.0 || ^13.0.0"
