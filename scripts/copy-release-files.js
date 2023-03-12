@@ -1,6 +1,6 @@
+const { readFileSync, writeFileSync, copyFileSync } = require('node:fs')
 const { join } = require('node:path')
 const { fileURLToPath, pathToFileURL } = require('node:url')
-const { readFileSync, writeFileSync, copyFileSync } = require('node:fs')
 
 // Get the URL of the excuting file
 const baseURL = pathToFileURL(__filename)
@@ -18,8 +18,6 @@ const distPackageJson = { ...packageJson }
 delete distPackageJson.devDependencies
 delete distPackageJson.files
 delete distPackageJson.scripts
-distPackageJson.main = 'index.js'
-distPackageJson.types = 'types/index.d.ts'
 const distPackageContents = JSON.stringify(distPackageJson, null, '  ')
 writeFileSync(distPackageURL, distPackageContents.concat('\n'))
 

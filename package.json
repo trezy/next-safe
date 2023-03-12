@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
-  "main": "lib/index.js",
-  "types": "types/types.d.ts",
+  "main": "index.js",
+  "types": "types.d.ts",
   "scripts": {
     "test": "jest",
     "clean": "rm -rf ./dist",
