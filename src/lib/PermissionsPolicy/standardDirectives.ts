@@ -25,6 +25,6 @@ const directives = [
 	'usb',
 	'web-share',
 	'xr-spatial-tracking',
-]
+] as const
 
 export default directives

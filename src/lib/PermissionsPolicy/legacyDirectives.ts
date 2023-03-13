@@ -15,6 +15,6 @@ const directives = [
 	'wake-lock',
 	'webauthn',
 	'web-share',
-]
+] as const
 
 export default directives

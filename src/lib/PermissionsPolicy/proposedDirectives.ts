@@ -1,8 +1,3 @@
-const directives = [
-	'clipboard-read',
-	'clipboard-write',
-	'gamepad',
-	'speaker-selection',
-]
+const directives = ['clipboard-read', 'clipboard-write', 'gamepad', 'speaker-selection'] as const
 
 export default directives
