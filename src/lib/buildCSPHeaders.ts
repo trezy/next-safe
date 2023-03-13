@@ -1,8 +1,5 @@
 // Local imports
-import type {
-	CSPDirectiveConfigValue,
-	CSPDirectivesConfig,
-} from '../models/CSP'
+import crunchCSPHeaderValue from './crunchCSPHeaderValue'
 import {
 	CSP_DEVELOPMENT_DIRECTIVE_NAMES,
 	CSP_DEVELOPMENT_DIRECTIVES,
@@ -12,14 +9,15 @@ import {
 	CSP_REQUIRED_DIRECTIVE_DEFAULTS,
 	CSP_REQUIRED_DIRECTIVE_NAMES,
 } from '../models/CSP'
+
+import type { CSPDirectiveConfigValue, CSPDirectivesConfig } from '../models/CSP'
 import type { NextSafeConfig } from '../models/nextSafe'
-import crunchCSPHeaderValue from './crunchCSPHeaderValue'
 
 function getCSPDirective(
 	value?: CSPDirectiveConfigValue,
 	defaultValue?: Exclude<CSPDirectiveConfigValue, false>,
-	mergeDefaultDirectives = false
-): false | string[] {
+	mergeDefaultDirectives = false,
+): string[] | false {
 	// if user configured value is false, return early
 	if (value === false) {
 		return false
@@ -30,14 +28,14 @@ function getCSPDirective(
 		if (typeof current === 'undefined') {
 			return accumulator
 		}
-		accumulator.push(...current.trim().split(/\s+/))
+		accumulator.push(...current.trim().split(/\s+/u))
 		return accumulator
 	}, [])
 
 	// flatten default values
-	const defaultValueArray = [defaultValue].flat().filter(
-		(v): v is string => typeof v === 'string'
-	)
+	const defaultValueArray = [defaultValue]
+		.flat()
+		.filter((val): val is string => typeof val === 'string')
 
 	// merge values with default if required
 	const mergedValueArray = mergeDefaultDirectives
@@ -48,9 +46,10 @@ function getCSPDirective(
 	const uniqueValueArray = [...new Set(mergedValueArray)]
 
 	// remove value "'none'" if the array contains other values
-	const validValueArray = uniqueValueArray.length > 1
-		? uniqueValueArray.filter((v) => v !== "'none'")
-		: uniqueValueArray
+	const validValueArray =
+		uniqueValueArray.length > 1
+			? uniqueValueArray.filter((val) => val !== "'none'")
+			: uniqueValueArray
 
 	// only return user configured values if present, otherwise return default
 	return validValueArray.length > 0 ? validValueArray : defaultValueArray
@@ -59,10 +58,7 @@ function getCSPDirective(
 type Options = Pick<NextSafeConfig, 'contentSecurityPolicy' | 'isDev'>
 
 function buildCSPHeaders(options: Options = {}) {
-	const {
-		contentSecurityPolicy = {},
-		isDev,
-	} = options
+	const { contentSecurityPolicy = {}, isDev } = options
 
 	if (contentSecurityPolicy === false) {
 		return []
@@ -78,7 +74,7 @@ function buildCSPHeaders(options: Options = {}) {
 		directives[name] = getCSPDirective(
 			contentSecurityPolicy[name],
 			CSP_REQUIRED_DIRECTIVE_DEFAULTS[name],
-			mergeDefaultDirectives
+			mergeDefaultDirectives,
 		)
 	})
 
@@ -89,14 +85,16 @@ function buildCSPHeaders(options: Options = {}) {
 		}
 	})
 
-	CSP_REPORT_DIRECTIVE_NAMES.some((name) => {
-		const configuredValue = contentSecurityPolicy[name]
+	CSP_REPORT_DIRECTIVE_NAMES.some((directiveName) => {
+		const configuredValue = contentSecurityPolicy[directiveName]
 		if (typeof configuredValue !== 'undefined') {
 			const normalisedValue = getCSPDirective(configuredValue)
 			CSP_REPORT_DIRECTIVE_NAMES.forEach((name) => {
 				directives[name] = normalisedValue
 			})
+			return true
 		}
+		return false
 	})
 
 	CSP_DIRECTIVE_NAMES.forEach((name) => {
@@ -122,8 +120,8 @@ function buildCSPHeaders(options: Options = {}) {
 	}
 
 	const cspString = crunchCSPHeaderValue(directives)
-	const reportOnly = typeof contentSecurityPolicy.reportOnly === 'boolean' &&
-		contentSecurityPolicy.reportOnly
+	const reportOnly =
+		typeof contentSecurityPolicy.reportOnly === 'boolean' && contentSecurityPolicy.reportOnly
 			? '-Report-Only'
 			: ''
 	const cspHeaderNames = [
