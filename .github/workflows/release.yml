@@ -7,9 +7,6 @@ on:
       - Test
     branches:
       - main
-      - next
-      - beta
-      - alpha
     types:
       - completed
 
